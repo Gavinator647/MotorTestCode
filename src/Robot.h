@@ -7,14 +7,21 @@
 #include <SmartDashboard/SendableChooser.h>
 #include <SmartDashboard/SmartDashboard.h>
 #include <IterativeRobot.h>
+
+
 #include "OI.h"
+
+
 #include "Subsystems/Motor.h"
 
-class Robot: public frc::IterativeRobot {
+class OI;
+
+class Robot: public IterativeRobot {
 public:
 
-	static Motor motor;
 	static OI oi;
+	static Motor motor;
+
 
 private:
 	frc::Command* m_autonomousCommand = nullptr;

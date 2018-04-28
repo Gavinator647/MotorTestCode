@@ -7,21 +7,23 @@
 
 #pragma once
 
+#include <Buttons/JoystickButton.h>
+#include "Commands/MotorTestLow.h"
+#include "Commands/MotorTestMedium.h"
+#include "Commands/MotorTestHigh.h"
 #include "Commands/KillMotor.h"
 #include <Joystick.h>
-#include <Buttons/JoystickButton.h>
-#include <Commands/MotorTestLow.h>
-#include <Commands/MotorTestMedium.h>
-#include <Commands/MotorTestHigh.h>
+
 
 class OI {
+
 public:
 	OI();
 	frc::Joystick& GetJoystick();
 
 private:
 
-	frc::JoystickButton m_joystick {0};
+	frc::Joystick m_joystick {0};
 	frc::JoystickButton a{&m_joystick, 1};
 	frc::JoystickButton b{&m_joystick, 2};
 	frc::JoystickButton x{&m_joystick, 3};
